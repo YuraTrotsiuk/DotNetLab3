@@ -40,13 +40,13 @@ namespace WinForms
             this.buttonPass = new System.Windows.Forms.Button();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelProgress = new System.Windows.Forms.Label();
             this.panelTimer = new System.Windows.Forms.Panel();
-            this.labeltextSizeFile = new System.Windows.Forms.Label();
             this.labelSizeFile = new System.Windows.Forms.Label();
+            this.labeltextSizeFile = new System.Windows.Forms.Label();
             this.labelTimeText = new System.Windows.Forms.Label();
             this.labelTimer = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.labelProgress = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panelPass.SuspendLayout();
             this.panelTimer.SuspendLayout();
@@ -60,7 +60,7 @@ namespace WinForms
             this.removeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(568, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(564, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,14 +69,14 @@ namespace WinForms
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.fileToolStripMenuItem.Text = "Файл";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
-            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+            this.openToolStripMenuItem.Text = "Відкрити";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // removeToolStripMenuItem
@@ -85,33 +85,32 @@ namespace WinForms
             this.codeToolStripMenuItem,
             this.decodeToolStripMenuItem});
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-            this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
+            this.removeToolStripMenuItem.Text = "Вибрати дію";
             this.removeToolStripMenuItem.Visible = false;
             // 
             // codeToolStripMenuItem
             // 
             this.codeToolStripMenuItem.Name = "codeToolStripMenuItem";
-            this.codeToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
-            this.codeToolStripMenuItem.Text = "Code";
+            this.codeToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.codeToolStripMenuItem.Text = "Шифрування";
             this.codeToolStripMenuItem.Click += new System.EventHandler(this.codeToolStripMenuItem_Click);
             // 
             // decodeToolStripMenuItem
             // 
             this.decodeToolStripMenuItem.Name = "decodeToolStripMenuItem";
-            this.decodeToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
-            this.decodeToolStripMenuItem.Text = "Decode";
+            this.decodeToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.decodeToolStripMenuItem.Text = "Розшифрування";
             this.decodeToolStripMenuItem.Click += new System.EventHandler(this.decodeToolStripMenuItem_Click);
             // 
             // labelHome
             // 
-            this.labelHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelHome.Font = new System.Drawing.Font("Stencil", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelHome.Font = new System.Drawing.Font("Stencil", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelHome.Location = new System.Drawing.Point(0, 28);
             this.labelHome.Name = "labelHome";
-            this.labelHome.Size = new System.Drawing.Size(568, 53);
+            this.labelHome.Size = new System.Drawing.Size(291, 53);
             this.labelHome.TabIndex = 2;
-            this.labelHome.Text = "Take a file";
+            this.labelHome.Text = "Виберіть файл";
             this.labelHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelPass
@@ -119,7 +118,7 @@ namespace WinForms
             this.panelPass.Controls.Add(this.buttonPass);
             this.panelPass.Controls.Add(this.textBoxPass);
             this.panelPass.Controls.Add(this.label1);
-            this.panelPass.Location = new System.Drawing.Point(74, 84);
+            this.panelPass.Location = new System.Drawing.Point(12, 84);
             this.panelPass.Name = "panelPass";
             this.panelPass.Size = new System.Drawing.Size(413, 134);
             this.panelPass.TabIndex = 3;
@@ -127,9 +126,9 @@ namespace WinForms
             // 
             // buttonPass
             // 
-            this.buttonPass.Location = new System.Drawing.Point(249, 69);
+            this.buttonPass.Location = new System.Drawing.Point(3, 89);
             this.buttonPass.Name = "buttonPass";
-            this.buttonPass.Size = new System.Drawing.Size(88, 35);
+            this.buttonPass.Size = new System.Drawing.Size(139, 33);
             this.buttonPass.TabIndex = 2;
             this.buttonPass.Text = "OK";
             this.buttonPass.UseVisualStyleBackColor = true;
@@ -137,7 +136,7 @@ namespace WinForms
             // 
             // textBoxPass
             // 
-            this.textBoxPass.Location = new System.Drawing.Point(92, 73);
+            this.textBoxPass.Location = new System.Drawing.Point(3, 56);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(139, 27);
             this.textBoxPass.TabIndex = 1;
@@ -145,61 +144,72 @@ namespace WinForms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 29);
+            this.label1.Location = new System.Drawing.Point(3, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Password:";
+            this.label1.Text = "Ключ:";
+            // 
+            // labelProgress
+            // 
+            this.labelProgress.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelProgress.Location = new System.Drawing.Point(297, 30);
+            this.labelProgress.Name = "labelProgress";
+            this.labelProgress.Size = new System.Drawing.Size(255, 51);
+            this.labelProgress.TabIndex = 5;
+            this.labelProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelProgress.Visible = false;
+            this.labelProgress.Click += new System.EventHandler(this.labelProgress_Click);
             // 
             // panelTimer
             // 
-            this.panelTimer.Controls.Add(this.labeltextSizeFile);
             this.panelTimer.Controls.Add(this.labelSizeFile);
+            this.panelTimer.Controls.Add(this.labeltextSizeFile);
             this.panelTimer.Controls.Add(this.labelTimeText);
             this.panelTimer.Controls.Add(this.labelTimer);
-            this.panelTimer.Location = new System.Drawing.Point(12, 244);
+            this.panelTimer.Location = new System.Drawing.Point(8, 212);
             this.panelTimer.Name = "panelTimer";
-            this.panelTimer.Size = new System.Drawing.Size(544, 34);
+            this.panelTimer.Size = new System.Drawing.Size(544, 66);
             this.panelTimer.TabIndex = 8;
             this.panelTimer.Visible = false;
-            // 
-            // labeltextSizeFile
-            // 
-            this.labeltextSizeFile.AutoSize = true;
-            this.labeltextSizeFile.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labeltextSizeFile.Location = new System.Drawing.Point(311, 6);
-            this.labeltextSizeFile.Name = "labeltextSizeFile";
-            this.labeltextSizeFile.Size = new System.Drawing.Size(104, 24);
-            this.labeltextSizeFile.TabIndex = 8;
-            this.labeltextSizeFile.Text = "File Size:";
             // 
             // labelSizeFile
             // 
             this.labelSizeFile.AutoSize = true;
-            this.labelSizeFile.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSizeFile.Location = new System.Drawing.Point(421, 6);
+            this.labelSizeFile.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelSizeFile.Location = new System.Drawing.Point(87, 36);
             this.labelSizeFile.Name = "labelSizeFile";
-            this.labelSizeFile.Size = new System.Drawing.Size(21, 24);
+            this.labelSizeFile.Size = new System.Drawing.Size(19, 24);
             this.labelSizeFile.TabIndex = 9;
             this.labelSizeFile.Text = "0";
+            // 
+            // labeltextSizeFile
+            // 
+            this.labeltextSizeFile.AutoSize = true;
+            this.labeltextSizeFile.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labeltextSizeFile.Location = new System.Drawing.Point(7, 37);
+            this.labeltextSizeFile.Name = "labeltextSizeFile";
+            this.labeltextSizeFile.Size = new System.Drawing.Size(76, 23);
+            this.labeltextSizeFile.TabIndex = 8;
+            this.labeltextSizeFile.Text = "Розмір:";
             // 
             // labelTimeText
             // 
             this.labelTimeText.AutoSize = true;
-            this.labelTimeText.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTimeText.Location = new System.Drawing.Point(20, 5);
+            this.labelTimeText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTimeText.Location = new System.Drawing.Point(7, 9);
             this.labelTimeText.Name = "labelTimeText";
-            this.labelTimeText.Size = new System.Drawing.Size(132, 24);
+            this.labelTimeText.Size = new System.Drawing.Size(50, 23);
             this.labelTimeText.TabIndex = 6;
-            this.labelTimeText.Text = "Time Crypt:";
+            this.labelTimeText.Text = "Час:";
             // 
             // labelTimer
             // 
             this.labelTimer.AutoSize = true;
-            this.labelTimer.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTimer.Location = new System.Drawing.Point(158, 6);
+            this.labelTimer.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTimer.Location = new System.Drawing.Point(87, 7);
             this.labelTimer.Name = "labelTimer";
-            this.labelTimer.Size = new System.Drawing.Size(21, 24);
+            this.labelTimer.Size = new System.Drawing.Size(19, 24);
             this.labelTimer.TabIndex = 7;
             this.labelTimer.Text = "0";
             // 
@@ -211,21 +221,12 @@ namespace WinForms
             this.progressBar.TabIndex = 4;
             this.progressBar.Visible = false;
             // 
-            // labelProgress
-            // 
-            this.labelProgress.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.labelProgress.Location = new System.Drawing.Point(0, 281);
-            this.labelProgress.Name = "labelProgress";
-            this.labelProgress.Size = new System.Drawing.Size(568, 20);
-            this.labelProgress.TabIndex = 5;
-            this.labelProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelProgress.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 301);
+            this.BackColor = System.Drawing.Color.Thistle;
+            this.ClientSize = new System.Drawing.Size(564, 301);
             this.Controls.Add(this.labelProgress);
             this.Controls.Add(this.panelPass);
             this.Controls.Add(this.labelHome);
@@ -234,7 +235,7 @@ namespace WinForms
             this.Controls.Add(this.progressBar);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Code";
+            this.Text = "Шифрування";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

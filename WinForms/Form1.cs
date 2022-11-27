@@ -35,7 +35,7 @@ namespace WinForms
                 codeToolStripMenuItem.Visible = true;
                 labelProgress.Visible = false;
                 panelTimer.Visible = false;
-                labelHome.Text = "Take Action";
+                labelHome.Text = "Виберіть дію";
 
             }
 
@@ -60,7 +60,7 @@ namespace WinForms
                 {
                     if (e.progress == 100)
                     {
-                        labelHome.Text = "Crypt Succsessful";
+                        labelHome.Text = "Успішно!";
                         labelHome.Visible = true;
                         progressBar.Visible = false;
                         openToolStripMenuItem.Visible = true;
@@ -84,7 +84,7 @@ namespace WinForms
         int flag;
         private void codeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            labelHome.Text = "Coding...";
+            labelHome.Text = "Шифрування";
             panelPass.Visible = true;
             decodeToolStripMenuItem.Visible = false;
             flag = 1;
@@ -92,7 +92,7 @@ namespace WinForms
 
         private void decodeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            labelHome.Text = "Decoding...";
+            labelHome.Text = "Розшифрування";
             panelPass.Visible = true;
             flag = 0;
             codeToolStripMenuItem.Visible = false;
@@ -126,6 +126,11 @@ namespace WinForms
             codeToolStripMenuItem.Visible = false;
             openToolStripMenuItem.Visible = false;
          
+        }
+
+        private void labelProgress_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

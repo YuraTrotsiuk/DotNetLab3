@@ -109,9 +109,6 @@ namespace ArchivatorLibrary
                 }
             };
             worker.RunWorkerAsync();
-
-            //flstrIN.Close();
-            //flstrOUT.Close();
         }
     }
 }
